@@ -7,8 +7,8 @@ const App = () => {
 
 
   async function handleClick(){
-      let response= await axios.get(import.meta.env.VITE_REACT_BACKEND_BASE_URL)
-      if(response){
+      let response= await axios.get("http://localhost:4000/v1/check")
+      if(response?.data){
         console.log(response.data)
         alert(response.data)
       }else{
